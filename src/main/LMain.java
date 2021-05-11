@@ -5,12 +5,10 @@ import java.util.Scanner;
 import view.VInitial;
 
 public class LMain {
-	
-    private Scanner scanner;
+
 	private VInitial initial;
-	
+
 	public LMain(Scanner scanner) {
-		this.scanner = scanner;
 		this.initial = new VInitial(scanner);
 	}
 

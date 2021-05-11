@@ -21,11 +21,11 @@ public class VHwewonDeungrok {
 		OHwewon oHwewon = new OHwewon();
 		
 		System.out.println("아이디:");
-		int id = scanner.nextInt();
+		String id = scanner.next();
 		oHwewon.setId(id);
 		
 		System.out.println("비밀번호:");
-		int password = scanner.nextInt();
+		String password = scanner.next();
 		oHwewon.setPassword(password);
 		
 		System.out.println("이름:");
@@ -37,7 +37,7 @@ public class VHwewonDeungrok {
 		oHwewon.setAddress(address);
 		
 		System.out.println("학과:");
-		int hwakgwa = scanner.nextInt();
+		String hwakgwa = scanner.next();
 		oHwewon.setHwakgwa(hwakgwa);
 		this.cHwewonDeungrok.saveHwewon(oHwewon);
 	}

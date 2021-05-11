@@ -11,8 +11,8 @@ public class CHwewonDeungrok {
 		this.dHwewonDeungrok = new DHwewonDeungrok();
 	}
 
-	public OHwewon readHwewon() {
-		OHwewon oHwewon = this.dHwewonDeungrok.read();
+	public OHwewon readHwewon(String id) {
+		OHwewon oHwewon = this.dHwewonDeungrok.read(id);
 		return oHwewon;
 	}
 
