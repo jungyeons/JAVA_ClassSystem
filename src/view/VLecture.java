@@ -17,8 +17,8 @@ public class VLecture {
 
 	}
 
-	public OLecture show(String fileName) {
-		System.out.println("강의를 선택하세요.");
+	public OLecture show(String fileName,String message) {
+		System.out.println(message+ " 선택하세요.");
 		// getAll함수호출 : 파일을 읽어서 벡터로 저장
 		Vector<OLecture> lectures = this.cLecture.getAll(fileName);
 

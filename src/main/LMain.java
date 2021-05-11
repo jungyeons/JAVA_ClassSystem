@@ -7,7 +7,8 @@ import view.VInitial;
 public class LMain {
 
 	private VInitial initial;
-
+	
+    //持失切 
 	public LMain(Scanner scanner) {
 		this.initial = new VInitial(scanner);
 	}
@@ -19,6 +20,7 @@ public class LMain {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		//LMain 持失切 硲窒 -> 梓端 持失
 		LMain main = new LMain(scanner);
 		main.run();
 		scanner.close();
