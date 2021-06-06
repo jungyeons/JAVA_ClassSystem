@@ -7,15 +7,23 @@ public class OLecture {
     private String id;
     private String name;
     private String professor;
-    private String credit;
-    private String time;
+    private String grade;
+    private String number;
 
     public void set(MLecture mLecture) {
         this.id = mLecture.getId();
         this.name = mLecture.getName();
         this.professor = mLecture.getProfessor();
-        this.credit = mLecture.getCredit();
-        this.time = mLecture.getTime();
+        this.grade = mLecture.getGrade();
+        this.number = mLecture.getNumber();
+    }
+
+    public void update(OLecture oLecture) {
+        this.id = oLecture.getId();
+        this.name = oLecture.getName();
+        this.professor = oLecture.getProfessor();
+        this.grade = oLecture.getGrade();
+        this.number = oLecture.getNumber();
     }
 
 
@@ -25,10 +33,6 @@ public class OLecture {
 
     public String getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -47,19 +51,19 @@ public class OLecture {
         this.professor = professor;
     }
 
-    public String getCredit() {
-        return credit;
+    public String getGrade() {
+        return grade;
     }
 
-    public void setCredit(String credit) {
-        this.credit = credit;
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 
-    public String getTime() {
-        return time;
+    public String getNumber() {
+        return number;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setNumber(String number) {
+        this.number = number;
     }
 }

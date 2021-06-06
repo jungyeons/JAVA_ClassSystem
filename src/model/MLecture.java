@@ -1,12 +1,16 @@
 package model;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
+import valueObject.OLecture;
+
 public class MLecture {
 
     private String id;
     private String name;
     private String professor;
-    private String credit;
-    private String time;
+    private String grade;
+    private String number;
 
 
     public MLecture() {
@@ -17,19 +21,42 @@ public class MLecture {
             this.id = scanner.next();
             this.name = scanner.next();
             this.professor = scanner.next();
-            this.credit = scanner.next();
-            this.time = scanner.next();
+            this.grade = scanner.next();
+            this.number = scanner.next();
             return true;
         }
         return false;
     }
 
-    public String getId() {
-        return id;
+    public void save(FileWriter fileWriter, OLecture oLecture) {
+        this.set(oLecture);
+
+        try {
+            fileWriter.write(id);
+            fileWriter.write(" ");
+            fileWriter.write(name);
+            fileWriter.write(" ");
+            fileWriter.write(professor);
+            fileWriter.write(" ");
+            fileWriter.write(grade);
+            fileWriter.write(" ");
+            fileWriter.write(number);
+            fileWriter.write("\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void set(OLecture oLecture) {
+        this.id = oLecture.getId();
+        this.name = oLecture.getName();
+        this.professor = oLecture.getProfessor();
+        this.grade = oLecture.getGrade();
+        this.number = oLecture.getNumber();
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getName() {
@@ -48,19 +75,19 @@ public class MLecture {
         this.professor = professor;
     }
 
-    public String getCredit() {
-        return credit;
+    public String getGrade() {
+        return grade;
     }
 
-    public void setCredit(String credit) {
-        this.credit = credit;
+    public void setGrade(String grade) {
+        this.grade = grade;
     }
 
-    public String getTime() {
-        return time;
+    public String getNumber() {
+        return number;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setNumber(String number) {
+        this.number = number;
     }
 }

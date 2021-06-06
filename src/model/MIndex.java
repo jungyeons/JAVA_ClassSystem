@@ -10,7 +10,7 @@ public class MIndex {
 	public MIndex() {
 		// TODO Auto-generated constructor stub
 	}
-	// 하나씩 읽음
+	
 	public boolean read(Scanner scanner) {
 		if(scanner.hasNext()) {
 			this.id = scanner.next();

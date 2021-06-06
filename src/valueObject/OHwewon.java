@@ -10,9 +10,7 @@ public class OHwewon {
 	private String address;
 	private String hwakgwa;
 
-	public OHwewon() {
-		// TODO Auto-generated constructor stub
-	}
+	
 	public void set(MHwewon mHwewon) {
 		this.id = mHwewon.getId();
 		this.password = mHwewon.getPassword();

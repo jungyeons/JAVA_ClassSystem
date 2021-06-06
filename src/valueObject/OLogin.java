@@ -5,9 +5,7 @@ public class OLogin {
 	private String id;
 	private String password;
 
-	public OLogin() {
-		// TODO Auto-generated constructor stub
-	}
+	
 
 	// setters&getters
 	public String getId() {
